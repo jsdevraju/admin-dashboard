@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome Url -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap Css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+     <!-- Back To top css -->
+     <link rel="stylesheet" href="./css/jquery-backToTop.min.css" />
+    <!-- Own Css FIle -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Responsive Css -->
+    <link rel="stylesheet" href="./css/responsive.css" />
+
+    <title>Razu - Admin Panel</title>
+  </head>
+  <body>
+
+     <!-- PreLoader For Website -->
+     <div class="preloader js-preloader flex-center">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    <!-- PreLoader For Website -->
+
+    <!-- Side Navigation Section Start Here -->
+    <div class="sidebar">
+      <nav class="nav_bar">
+        <div class="logo">
+          <a href="index.html">
+            <span><i class="fa-solid fa-r"></i></span>
+          </a>
+        </div>
+        <div class="nav_item">
+          <ul class="side_menu">
+            <!-- Main Menu -->
+            <li class="slide_item_category">Main</li>
+            <li class="side active">
+              <a href="#"> <i class="fa-solid fa-house-user"></i> Dashboard</a>
+            </li>
+            <!-- Components Menu  -->
+            <li class="slide_item_category">Components</li>
+            <li class="side">
+              <a href="#"><i class="fa-solid fa-business-time"></i> Utilities</a>
+            </li>
+            <li class="side">
+              <a href="#"> <i class="fa-solid fa-database"></i> Elements</a>
+            </li>
+            <li class="side">
+              <a href="#"> <i class="fa-solid fa-ghost"></i> Apps</a>
+            </li>
+            <!--  Tables & Icons -->
+            <li class="slide_item_category">Tables & Icons</li>
+            <li class="side">
+              <a href="#"> <i class="fa-solid fa-table"></i> Tables</a>
+            </li>
+            <li class="side">
+              <a href="#"><i class="fa-solid fa-gift"></i> Icons</a>
+            </li>
+            <!--  Widgets & Maps -->
+            <li class="slide_item_category">Widgets & Maps</li>
+            <li class="side">
+              <a href="#"><i class="fa-brands fa-medapps"></i> Widgets</a>
+            </li>
+            <li class="side">
+              <a href="#"> <i class="fa-solid fa-map"></i> Map</a>
+            </li>
+            <!--  Forms & Charts  -->
+            <li class="slide_item_category">Forms & Charts</li>
+            <li class="side">
+              <a href="#"> <i class="fa-brands fa-wpforms"></i> Forms</a>
+            </li>
+            <li class="side">
+              <a href="#"> <i class="fa-solid fa-chart-column"></i> Charts</a>
+            </li>
+            <!--  Custom & Error Pages  -->
+            <li class="slide_item_category">Custom & Error Pages</li>
+            <li class="side">
+              <a href="#"> <i class="fa-solid fa-user-tie"></i> Custom Pages</a>
+            </li>
+            <li class="side">
+              <a href="#"><i class="fa-solid fa-circle-exclamation"></i> Error Pages</a>
+            </li>
+            <li class="side">
+              <a href="#"> <i class="fa-solid fa-bars"></i> Sub Menus</a>
+            </li>
+            <li class="side">
+              <a href="#"> <i class="fa-solid fa-cart-plus"></i> E-commerce</a>
+            </li>
+            <li class="side">
+              <a href="#"> <i class="fa-solid fa-chart-pie"></i> E-commerce</a>
+            </li>
+            <li class="side">
+              <a href="#"> <i class="fa-brands fa-cc-mastercard"></i> E-commerce</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Side Navigation Section Start Here -->
+
+    <!-- Main Page Start Here -->
+    <main class="app">
+      <!-- Navbar -->
+      <div class="top_navbar">
+        <div class="menu_bars">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="search">
+          <input type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="nav_right">
+          <!-- Dark Mode -->
+          <div class="theme-switch">
+            <div class="switch"></div>
+          </div>
+          <!-- Dark Mode -->
+          <!-- Message -->
+          <div class="dropdown">
+            <div
+              class="message"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-message"></i>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <div class="menu_header">
+                <p>Message</p>
+                <span>New</span>
+              </div>
+              <!-- Single User -->
+              <div class="user">
+                <div class="user_img">
+                  <img src="./images/1.jpg" alt="This is demo images" />
+                </div>
+                <div class="user_info">
+                  <span class="mb-1 fs-13">Joan Powell</span>
+                  <p class="fs-12 mb-1">All the best your template awesome</p>
+                  <div class="fs-11 text-muted">3 hours ago</div>
+                </div>
+              </div>
+              <!-- Single User -->
+              <!-- Single User -->
+              <div class="user">
+                <div class="user_img">
+                  <img src="./images/1.jpg" alt="This is demo images" />
+                </div>
+                <div class="user_info">
+                  <span class="mb-1 fs-13">Joan Powell</span>
+                  <p class="fs-12 mb-1">All the best your template awesome</p>
+                  <div class="fs-11 text-muted">3 hours ago</div>
+                </div>
+              </div>
+              <!-- Single User -->
+              <!-- Single User -->
+              <div class="user bottom">
+                <div class="user_img">
+                  <img src="./images/1.jpg" alt="This is demo images" />
+                </div>
+                <div class="user_info">
+                  <span class="mb-1 fs-13">Joan Powell</span>
+                  <p class="fs-12 mb-1">All the best your template awesome</p>
+                  <div class="fs-11 text-muted">3 hours ago</div>
+                </div>
+              </div>
+              <!-- Single User -->
+              <button class="btn btn-primary" style="width: 100%">
+                View More
+              </button>
+            </div>
+          </div>
+          <!-- Message -->
+          <!-- Notification -->
+          <div class="dropdown">
+            <div
+              class="notification"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <div class="menu_header">
+                <p>Notification</p>
+                <span>New</span>
+              </div>
+              <div class="notification_single">
+                <div class="noti_icon">
+                  <i class="fa-solid fa-message"></i>
+                </div>
+                <div class="user_info">
+                  <span class="mb-1 fs-13">Message Sent</span>
+                  <div class="fs-11 text-muted">3 hours ago</div>
+                </div>
+              </div>
+              <div class="notification_single">
+                <div class="noti_icon">
+                  <i class="fa-solid fa-message"></i>
+                </div>
+                <div class="user_info">
+                  <span class="mb-1 fs-13">Message Sent</span>
+                  <div class="fs-11 text-muted">3 hours ago</div>
+                </div>
+              </div>
+              <div class="notification_single bottom">
+                <div class="noti_icon">
+                  <i class="fa-solid fa-message"></i>
+                </div>
+                <div class="user_info">
+                  <span class="mb-1 fs-13">Message Sent</span>
+                  <div class="fs-11 text-muted">3 hours ago</div>
+                </div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%">
+                View More
+              </button>
+            </div>
+          </div>
+          <!-- Notification -->
+          <!-- Profile -->
+          <div class="dropdown profile">
+            <div
+              class="user_img"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img src="./images/1.jpg" alt="This is demo images" />
+            </div>
+            <div
+              class="dropdown-menu p-3"
+              aria-labelledby="dropdownMenuButton1"
+            >
+              <div class="text-center p-2">
+                <p>Joan Alina</p>
+                <span>Web Designer</span>
+              </div>
+              <div class="user_details">
+                <a class="text-muted" href="#"><i class="fa-solid fa-user"></i> Profile</a>
+                <a class="text-muted" href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a class="text-muted" href="#"><i class="fa-solid fa-message"></i> Messages</a>
+                <a class="text-muted" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+              </div>
+            </div>
+          </div>
+          <!-- Profile -->
+        </div>
+      </div>
+      <!-- Navbar -->
+      <!-- Home Section Start Here  -->
+      <section class="home">
+        <div class="home_header">
+          <h3>Dashboard</h3>
+          <div class="date_picker">
+            <button class="app_btn">
+              <i class="fa-solid fa-download"></i> Import
+            </button>
+            <div class="dropdown">
+              <button
+                class="app_btn date"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-calendar-days"></i> Search By Date
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item text-muted" href="#">Today</a></li>
+                <li><a class="dropdown-item text-muted" href="#">Yesterday</a></li>
+                <li><a class="dropdown-item text-muted" href="#">Last 7 days</a></li>
+                <li><a class="dropdown-item text-muted" href="#">Last 30 days</a></li>
+                <li><a class="dropdown-item text-muted" href="#">Last Month</a></li>
+                <li><a class="dropdown-item text-muted" href="#">Last 6 Month</a></li>
+                <li><a class="dropdown-item text-muted" href="#">Last Year</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- dashboard analytics -->
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <div class="analytics bg_1">
+              <h5>Total Sales</h5>
+              <h1>3,267</h1>
+              <p>
+                <i class="fa-solid fa-circle-arrow-up"></i> 76% Growth This
+                Month
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="analytics bg_2">
+              <h5>Total Sales</h5>
+              <h1>3,267</h1>
+              <p>
+                <i class="fa-solid fa-circle-arrow-up"></i> 76% Growth This
+                Month
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="analytics bg_3">
+              <h5>Total Sales</h5>
+              <h1>3,267</h1>
+              <p>
+                <i class="fa-solid fa-circle-arrow-up"></i> 76% Growth This
+                Month
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="analytics bg_4">
+              <h5>Total Sales</h5>
+              <h1>3,267</h1>
+              <p>
+                <i class="fa-solid fa-circle-arrow-up"></i> 76% Growth This
+                Month
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- dashboard analytics -->
+
+        <!-- Container Product -->
+        <div class="row g-4">
+          <div class="col-lg-7 col-md-12">
+            <!-- Sales Activity  -->
+            <div class="sales common mt-5">
+              <h5>Sales Activity</h5>
+              <div id="chart"></div>
+            </div>
+            <!-- Sales Activity  -->
+          </div>
+          <div class="col-lg-5 col-md-12">
+            <div class="activity common mt-5">
+              <div class="activity_header mb-3">
+                <h5>Recent Activity</h5>
+                <span class="sm_btn">View All</span>
+              </div>
+
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>1</span>
+                </div>
+                <div class="product_details">
+                  <h6>New Products, <span>52% New products</span></h6>
+                  <p class="text-muted">More than 200 new products are added</p>
+                </div>
+                <div class="time">
+                  <span class="text-muted">6:45pm</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>1</span>
+                </div>
+                <div class="product_details">
+                  <h6>New Products, <span>52% New products</span></h6>
+                  <p class="text-muted">More than 200 new products are added</p>
+                </div>
+                <div class="time">
+                  <span class="text-muted">6:45pm</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>1</span>
+                </div>
+                <div class="product_details">
+                  <h6>New Products, <span>52% New products</span></h6>
+                  <p class="text-muted">More than 200 new products are added</p>
+                </div>
+                <div class="time">
+                  <span class="text-muted">6:45pm</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>1</span>
+                </div>
+                <div class="product_details">
+                  <h6>New Products, <span>52% New products</span></h6>
+                  <p class="text-muted">More than 200 new products are added</p>
+                </div>
+                <div class="time">
+                  <span class="text-muted">6:45pm</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>1</span>
+                </div>
+                <div class="product_details">
+                  <h6>New Products, <span>52% New products</span></h6>
+                  <p class="text-muted">More than 200 new products are added</p>
+                </div>
+                <div class="time">
+                  <span class="text-muted">6:45pm</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>1</span>
+                </div>
+                <div class="product_details">
+                  <h6>New Products, <span>52% New products</span></h6>
+                  <p class="text-muted">More than 200 new products are added</p>
+                </div>
+                <div class="time">
+                  <span class="text-muted">6:45pm</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+            </div>
+          </div>
+        </div>
+        <!-- Container Product -->
+        <!-- Top Product Section Start Here -->
+        <div class="row g-3 mt-5">
+          <div class="col-lg-6 col-md-12">
+            <div class="top_product p-3 common">
+              <div class="activity_header mb-3">
+                <h5>Top Product</h5>
+                <span class="sm_btn">View All</span>
+              </div>
+              <!-- Top Product List -->
+              <input
+                type="text"
+                class="form-control mb-3 tablesearch-input"
+                data-tablesearch-table="#data-table"
+                placeholder="Search"
+              />
+
+              <div class="table-responsive">
+                <table
+                  id="data-table"
+                  class="table tablesearch-table table-bordered table-striped"
+                >
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Product Category</th>
+                      <th>Product Name</th>
+                      <th>Sale Value</th>
+                      <th>Sale Info</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td class="d-flex align-items-center">
+                        <img
+                          src="./images/7.jpg"
+                          alt="This is demo"
+                          class="me-2"
+                        />
+                        Books
+                      </td>
+                      <td class="text-success">
+                        <span class="cirDot"></span> Book
+                      </td>
+                      <td>$1234</td>
+                      <td class="text-muted">3 days ago</td>
+                      <td class="text-success">
+                        <span class="bg_success">Regular</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="d-flex align-items-center">
+                        <img
+                          src="./images/5.jpg"
+                          alt="This is demo"
+                          class="me-2"
+                        />
+                        Sports
+                      </td>
+                      <td class="text-success">
+                        <span class="cirDot"></span> Shoes
+                      </td>
+                      <td>$1234</td>
+                      <td class="text-muted">3 days ago</td>
+                      <td class="text-success">
+                        <span class="bg_success">Regular</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td class="d-flex align-items-center">
+                        <img
+                          src="./images/6.jpg"
+                          alt="This is demo"
+                          class="me-2"
+                        />
+                        Accesories
+                      </td>
+                      <td class="text-success">
+                        <span class="cirDot"></span> Watch
+                      </td>
+                      <td>$1234</td>
+                      <td class="text-muted">3 days ago</td>
+                      <td class="text-success">
+                        <span class="bg_success">Regular</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td class="d-flex align-items-center">
+                        <img
+                          src="./images/4.jpg"
+                          alt="This is demo"
+                          class="me-2"
+                        />
+                        Watches
+                      </td>
+                      <td class="text-success">
+                        <span class="cirDot"></span> Smart Watch
+                      </td>
+                      <td>$1234</td>
+                      <td class="text-muted">3 days ago</td>
+                      <td class="text-success">
+                        <span class="bg_success">Regular</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td class="d-flex align-items-center">
+                        <img
+                          src="./images/10.jpg"
+                          alt="This is demo"
+                          class="me-2"
+                        />
+                        Speakers
+                      </td>
+                      <td class="text-success">
+                        <span class="cirDot"></span> Head set
+                      </td>
+                      <td>$1234</td>
+                      <td class="text-muted">3 days ago</td>
+                      <td class="text-success">
+                        <span class="bg_success">Regular</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td class="d-flex align-items-center">
+                        <img
+                          src="./images/7.jpg"
+                          alt="This is demo"
+                          class="me-2"
+                        />
+                        Books
+                      </td>
+                      <td class="text-success">
+                        <span class="cirDot"></span> Book
+                      </td>
+                      <td>$1234</td>
+                      <td class="text-muted">3 days ago</td>
+                      <td class="text-success">
+                        <span class="bg_success">Regular</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <div class="transition p-3 common">
+              <div class="activity_header mb-3">
+                <h5>Recent transactions</h5>
+                <span class="sm_btn">View All</span>
+              </div>
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>RK</span>
+                </div>
+                <div class="product_details">
+                  <h6>Ricky</h6>
+                  <p class="text-muted">2 hours ago</p>
+                </div>
+                <div class="time">
+                  <span class="text-success">+$453</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>RK</span>
+                </div>
+                <div class="product_details">
+                  <h6>Ricky</h6>
+                  <p class="text-muted">2 hours ago</p>
+                </div>
+                <div class="time">
+                  <span class="text-success">+$453</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>RK</span>
+                </div>
+                <div class="product_details">
+                  <h6>Ricky</h6>
+                  <p class="text-muted">2 hours ago</p>
+                </div>
+                <div class="time">
+                  <span class="text-success">+$453</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>RK</span>
+                </div>
+                <div class="product_details">
+                  <h6>Ricky</h6>
+                  <p class="text-muted">2 hours ago</p>
+                </div>
+                <div class="time">
+                  <span class="text-success">+$453</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>RK</span>
+                </div>
+                <div class="product_details">
+                  <h6>Ricky</h6>
+                  <p class="text-muted">2 hours ago</p>
+                </div>
+                <div class="time">
+                  <span class="text-success">+$453</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+              <!-- Product Activity -->
+              <div class="single_product">
+                <div class="circle">
+                  <span>RK</span>
+                </div>
+                <div class="product_details">
+                  <h6>Ricky</h6>
+                  <p class="text-muted">2 hours ago</p>
+                </div>
+                <div class="time">
+                  <span class="text-success">+$453</span>
+                </div>
+              </div>
+              <!-- Product Activity -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <div class="revenue p-3 common">
+              <div class="activity_header mb-3">
+                <h5>Recent transactions</h5>
+                <span class="sm_btn">View All</span>
+              </div>
+              <div class="revenue_main mb-3">
+                <h6 class="text-muted">Monthly Profit</h6>
+                <p class="d-flex justify-content-between align-items-center">
+                  $25,854
+                  <span class="text-muted">
+                    <i class="fa-solid fa-arrow-up"></i> 62% increase</span
+                  >
+                </p>
+                <div id="example"></div>
+              </div>
+              <div class="revenue_main mb-3">
+                <h6 class="text-muted">Monthly Profit</h6>
+                <p class="d-flex justify-content-between align-items-center">
+                  $25,854
+                  <span class="text-muted">
+                    <i class="fa-solid fa-arrow-up"></i> 62% increase</span
+                  >
+                </p>
+                <div id="example_1"></div>
+              </div>
+              <div class="revenue_main mb-3">
+                <h6 class="text-muted">Monthly Profit</h6>
+                <p class="d-flex justify-content-between align-items-center">
+                  $25,854
+                  <span class="text-muted">
+                    <i class="fa-solid fa-arrow-up"></i> 62% increase</span
+                  >
+                </p>
+                <div id="example_2"></div>
+              </div>
+              <div class="revenue_main">
+                <h6 class="text-muted">Monthly Profit</h6>
+                <p class="d-flex justify-content-between align-items-center">
+                  $25,854
+                  <span class="text-muted">
+                    <i class="fa-solid fa-arrow-up"></i> 62% increase</span
+                  >
+                </p>
+                <div id="example_3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Top Product Section Ends Here -->
+        <!-- Summary Section Start Here -->
+        <div class="summary common p-4 mt-5">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="activity_header mb-3">
+                <h5>Invoice Summary</h5>
+                <span class="sm_btn">View All</span>
+              </div>
+              <div class="table-data">
+                <input
+                  type="text"
+                  placeholder="Search in table..."
+                  id="searchField"
+                />
+                <div id="table-sortable"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Summary Section Ends Here -->
+      </section>
+      <!-- Home Section Start Here  -->
+    </main>
+    <!-- Main Page Ends Here -->
+
+    <!-- Bootstrap Js File  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Jquery Url here -->
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!-- Sales Activity  -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Table -->
+    <script src="./js/auto-tables.js"></script>
+    <!-- animation -->
+    <script src="./js/jquery.progressBarTimer.js"></script>
+    <!-- Table Sort Data Bottom -->
+    <script src="./js/table-sortable.js"></script>
+    <!-- Back to top Js File -->
+    <script src="./js/jquery-backToTop.js"></script>
+    <!-- Preloader -->
+    <script src="./js/preload.min.js"></script>
+        <!-- Main Js File -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
